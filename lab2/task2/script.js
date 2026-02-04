@@ -1,3 +1,3 @@
-// Instagram login page - no JavaScript required for static layout
-// Form validation would be handled server-side in production
+// just JS file, no need yet
+// by Ibra Tlektes
 

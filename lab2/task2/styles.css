@@ -58,16 +58,29 @@ body {
   color: #ed4956;
 }
 
+.logo-img {
+  width: 175px;     
+  height: auto;
+}
+
+
 .mockup-image {
   width: 250px;
   height: 450px;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   border-radius: 20px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+}
+
+.mockup-image img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .login-section {
@@ -88,8 +101,9 @@ body {
   margin: 0 0 36px;
 }
 
-.logo svg {
-  fill: #000;
+.logo img {
+  max-width: 80px;
+  height: auto;
 }
 
 .login-form input {
@@ -165,7 +179,7 @@ body {
 }
 
 .forgot-link {
-  text-align: center;
+  text-align: center; 
   color: #00376b;
   text-decoration: none;
   font-size: 12px;
@@ -200,7 +214,6 @@ body {
 
 .app-download p {
   font-size: 14px;
-  color: #262626;
   margin-bottom: 16px;
 }
 
@@ -213,7 +226,7 @@ body {
 .app-buttons a {
   width: 136px;
   height: 40px;
-  background-color: #000;
+  background: rgb(206, 13, 122);
   border-radius: 5px;
   display: block;
 }
