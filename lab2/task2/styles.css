@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 32px;
+  max-width: 935px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.phone-mockup {
+  flex: 0 0 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.mockup-content p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #262626;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ed4956;
+}
+
+.mockup-image {
+  width: 250px;
+  height: 450px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-section {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box {
+  background: white;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  text-align: center;
+  margin: 0 0 36px;
+}
+
+.logo svg {
+  fill: #000;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 9px 8px;
+  font-size: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  margin-bottom: 6px;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #a8a8a8;
+  background-color: white;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #0095f6;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px 0 18px;
+}
+
+.login-btn:hover {
+  background-color: #1877f2;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 18px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.separator .line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.separator span {
+  margin: 0 18px;
+}
+
+.facebook-login {
+  width: 100%;
+  background: transparent;
+  color: #385185;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.facebook-login:hover {
+  color: #1e3a5f;
+}
+
+.forgot-link {
+  text-align: center;
+  color: #00376b;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.forgot-link:hover {
+  color: #003c75;
+}
+
+.signup-box {
+  background: white;
+  border: 1px solid #dbdbdb;
+  padding: 24px 40px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.signup-link {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link:hover {
+  color: #1877f2;
+}
+
+.app-download {
+  text-align: center;
+}
+
+.app-download p {
+  font-size: 14px;
+  color: #262626;
+  margin-bottom: 16px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.app-buttons a {
+  width: 136px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 5px;
+  display: block;
+}
+
+.footer {
+  background: #fafafa;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.footer nav a {
+  color: #8e8e8e;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-meta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.footer-meta select {
+  border: 1px solid #dbdbdb;
+  background: transparent;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+@media (max-width: 875px) {
+  .phone-mockup {
+    display: none;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+}
