@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1 class="page-title">Albums</h1>
+  <span class="page-count">{{ albums.length }} albums</span>
+</div>
+
+@if (loading) {
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Loading albums...</p>
+  </div>
+} @else {
+  <ul class="album-list">
+    @for (album of albums; track album.id) {
+      <li class="album-item">
+        <a class="album-item__link" [routerLink]="['/albums', album.id]">
+          <span class="album-item__id">#{{ album.id }}</span>
+          <span class="album-item__title">{{ album.title }}</span>
+          <span class="album-item__arrow">&#8250;</span>
+        </a>
+        <button class="album-item__delete" type="button" (click)="deleteAlbum(album.id, $event)" title="Delete album">
+          Delete
+        </button>
+      </li>
+    }
+  </ul>
+}

@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <span class="site-header__logo">Online Store</span>
+  </div>
+</header>
+
+<nav class="categories">
+  <div class="categories__inner">
+    @for (category of categories; track category.id) {
+      <button
+        type="button"
+        class="category-btn"
+        [class.category-btn--active]="selectedCategory?.id === category.id"
+        (click)="selectCategory(category)"
+      >
+        {{ category.name }}
+      </button>
+    }
+  </div>
+</nav>
+
+@if (selectedCategory) {
+  <app-product-list [products]="products" />
+} @else {
+  <p class="welcome">Выберите категорию, чтобы просмотреть товары.</p>
+}

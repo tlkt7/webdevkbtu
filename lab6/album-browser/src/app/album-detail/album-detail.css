@@ -1,0 +1,165 @@
+.btn--back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn--back:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 80px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #eee;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.detail {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 28px 32px;
+  max-width: 640px;
+}
+
+.detail__meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.detail__id,
+.detail__user {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #999;
+  background: #f5f5f5;
+  padding: 3px 9px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.detail__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.detail__section {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.detail__edit {
+  margin-bottom: 24px;
+}
+
+.detail__input {
+  width: 100%;
+  padding: 9px 14px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+  color: #111;
+  margin-bottom: 10px;
+  transition: border-color 0.15s;
+}
+
+.detail__input:focus {
+  border-color: #111;
+}
+
+.detail__edit-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn--primary {
+  padding: 9px 20px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: #333;
+}
+
+.btn--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.detail__saved {
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.detail__actions {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn--outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: #fff;
+  border: 1px solid #111;
+  border-radius: 3px;
+  color: #111;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn--outline:hover {
+  background: #111;
+  color: #fff;
+}

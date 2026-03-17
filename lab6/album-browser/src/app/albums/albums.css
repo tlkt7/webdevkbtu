@@ -1,0 +1,111 @@
+.page-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+.page-count {
+  font-size: 13px;
+  color: #999;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 80px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #eee;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.album-list {
+  list-style: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.album-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.album-item:last-child {
+  border-bottom: none;
+}
+
+.album-item__link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: #111;
+  transition: background 0.1s;
+}
+
+.album-item__link:hover {
+  background: #f9f9f9;
+}
+
+.album-item__id {
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+  min-width: 36px;
+}
+
+.album-item__title {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.album-item__arrow {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.album-item__delete {
+  padding: 6px 12px;
+  margin-right: 8px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.album-item__delete:hover {
+  border-color: #111;
+  color: #fff;
+  background: #111;
+}

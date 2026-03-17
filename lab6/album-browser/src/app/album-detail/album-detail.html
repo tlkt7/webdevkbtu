@@ -1,0 +1,41 @@
+<button class="btn btn--back" type="button" (click)="goBack()">&#8592; Back to Albums</button>
+
+@if (loading) {
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Loading album...</p>
+  </div>
+} @else if (album) {
+  <div class="detail">
+    <div class="detail__meta">
+      <span class="detail__id">Album #{{ album.id }}</span>
+      <span class="detail__user">User {{ album.userId }}</span>
+    </div>
+
+    <h1 class="detail__title">{{ album.title }}</h1>
+
+    <div class="detail__edit">
+      <h2 class="detail__section">Edit Title</h2>
+      <input
+        class="detail__input"
+        type="text"
+        [(ngModel)]="editTitle"
+        placeholder="Album title"
+      />
+      <div class="detail__edit-actions">
+        <button class="btn btn--primary" type="button" (click)="save()" [disabled]="saving">
+          {{ saving ? 'Saving...' : 'Save' }}
+        </button>
+        @if (saved) {
+          <span class="detail__saved">Saved</span>
+        }
+      </div>
+    </div>
+
+    <div class="detail__actions">
+      <a class="btn btn--outline" [routerLink]="['/albums', album.id, 'photos']">
+        View Photos
+      </a>
+    </div>
+  </div>
+}

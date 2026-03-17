@@ -1,0 +1,22 @@
+<button class="btn btn--back" type="button" (click)="goBack()">&#8592; Back to Album</button>
+
+@if (loading) {
+  <div class="loading">
+    <div class="spinner"></div>
+    <p>Loading photos...</p>
+  </div>
+} @else {
+  <div class="photos-header">
+    <h1 class="page-title">Photos — Album #{{ albumId }}</h1>
+    <span class="page-count">{{ photos.length }} photos</span>
+  </div>
+
+  <div class="photo-grid">
+    @for (photo of photos; track photo.id) {
+      <div class="photo-card">
+        <img class="photo-card__img" [src]="photo.thumbnailUrl" [alt]="photo.title" loading="lazy" />
+        <p class="photo-card__title">{{ photo.title }}</p>
+      </div>
+    }
+  </div>
+}

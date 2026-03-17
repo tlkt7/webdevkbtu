@@ -1,0 +1,65 @@
+.hero {
+  text-align: center;
+  padding: 64px 24px 48px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.hero__subtitle {
+  font-size: 15px;
+  color: #666;
+  max-width: 520px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+.btn--primary {
+  display: inline-block;
+  padding: 9px 24px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.btn--primary:hover {
+  background: #333;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.feature-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.feature-card__text {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}

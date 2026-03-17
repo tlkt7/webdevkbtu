@@ -1,0 +1,44 @@
+<article class="card">
+  <div class="card__gallery">
+    <button class="gallery__arrow gallery__arrow--prev" type="button" (click)="prevImage()">&#8249;</button>
+    <a [href]="product.link" target="_blank" rel="noopener">
+      <img class="card__main-image" [src]="activeImage" [alt]="product.name" />
+    </a>
+    <button class="gallery__arrow gallery__arrow--next" type="button" (click)="nextImage()">&#8250;</button>
+  </div>
+
+  <div class="card__thumbnails">
+    @for (img of product.images; track $index) {
+      <img
+        class="card__thumb"
+        [class.card__thumb--active]="$index === activeImageIndex"
+        [src]="img"
+        [alt]="product.name + ' image ' + ($index + 1)"
+        (click)="selectImage($index)"
+      />
+    }
+  </div>
+
+  <div class="card__body">
+    <h2 class="card__name">
+      <a [href]="product.link" target="_blank" rel="noopener">{{ product.name }}</a>
+    </h2>
+
+    <div class="card__rating">
+      @for (filled of getStars(product.rating); track $index) {
+        <span class="star" [class.star--filled]="filled">&#9733;</span>
+      }
+      <span class="card__rating-value">{{ product.rating }}</span>
+    </div>
+
+    <p class="card__description">{{ product.description }}</p>
+
+    <div class="card__footer">
+      <span class="card__price">{{ formatPrice(product.price) }}</span>
+      <div class="card__share">
+        <button type="button" class="btn btn--whatsapp" (click)="shareOnWhatsApp()">WhatsApp</button>
+        <button type="button" class="btn btn--telegram" (click)="shareOnTelegram()">Telegram</button>
+      </div>
+    </div>
+  </div>
+</article>
